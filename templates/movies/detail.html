@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+    <h3><strong>{{ movie.name }}</strong> filminin detaylarını görüntülüyorsunuz</h3>
+    <hr>
+    <div class="row">
+        <div class="col-md-3">
+            <img src="{% static movie.getImagePath %}" class="card-img" alt="">
+        </div>
+        <div class="col-md-9">
+            <p class="card-text">
+                {{ movie.description }}
+            </p>
+        </div>
+    </div>
+{% endblock %}
